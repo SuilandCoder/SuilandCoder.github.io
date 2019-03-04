@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="喜欢摇滚，喜欢篮球，喜欢编程，喜欢很多东西，正在寻找热爱的事情。"><title>angular风格指南 | Zero</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">angular风格指南</h1><a id="logo" href="/.">Zero</a><p class="description">至道无难，唯嫌拣择。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">angular风格指南</h1><div class="post-meta">Mar 3, 2019<span> | </span><span class="category"><a href="/categories/angular/">angular</a></span></div><a class="disqus-comment-count" href="/2019/03/03/190303-1-angular风格指南/#vcomment"><span class="valine-comment-count" data-xid="/2019/03/03/190303-1-angular风格指南/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#单一职责"><span class="toc-number">1.</span> <span class="toc-text">单一职责</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单一规则"><span class="toc-number">1.1.</span> <span class="toc-text">单一规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#小函数"><span class="toc-number">1.2.</span> <span class="toc-text">小函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#命名"><span class="toc-number">2.</span> <span class="toc-text">命名</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#总体命名原则"><span class="toc-number">2.1.</span> <span class="toc-text">总体命名原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用点和横杠来分隔文件名"><span class="toc-number">2.2.</span> <span class="toc-text">使用点和横杠来分隔文件名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#符号名与文件名"><span class="toc-number">2.3.</span> <span class="toc-text">符号名与文件名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#引导"><span class="toc-number">2.4.</span> <span class="toc-text">引导</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组件选择器"><span class="toc-number">2.5.</span> <span class="toc-text">组件选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为组件添加自定义前缀"><span class="toc-number">2.6.</span> <span class="toc-text">为组件添加自定义前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指令选择器"><span class="toc-number">2.7.</span> <span class="toc-text">指令选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#为指令添加自定义前缀"><span class="toc-number">2.8.</span> <span class="toc-text">为指令添加自定义前缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#管道名"><span class="toc-number">2.9.</span> <span class="toc-text">管道名</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编程约定"><span class="toc-number">3.</span> <span class="toc-text">编程约定</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#常量"><span class="toc-number">3.1.</span> <span class="toc-text">常量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用程序结构与NgModule"><span class="toc-number">4.</span> <span class="toc-text">应用程序结构与NgModule</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#LIFT"><span class="toc-number">4.1.</span> <span class="toc-text">LIFT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定位"><span class="toc-number">4.2.</span> <span class="toc-text">定位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#识别"><span class="toc-number">4.3.</span> <span class="toc-text">识别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#扁平"><span class="toc-number">4.4.</span> <span class="toc-text">扁平</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#T-DRY（尽量不重复自己）"><span class="toc-number">4.5.</span> <span class="toc-text">T-DRY（尽量不重复自己）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#共享特性模块"><span class="toc-number">4.6.</span> <span class="toc-text">共享特性模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#核心特性模块"><span class="toc-number">4.7.</span> <span class="toc-text">核心特性模块</span></a></li></ol></li></ol></div></div><div class="post-content"><blockquote>
+<p>此文章内容包括官网中的<a href="https://www.angular.cn/guide/styleguide#separate-file-names-with-dots-and-dashes" target="_blank" rel="noopener">风格指南</a>，及<a href="https://zhuanlan.zhihu.com/p/28874230" target="_blank" rel="noopener">知乎野草</a>文章中关于<a href="https://codeburst.io/angular-best-practices-4bed7ae1d0b7" target="_blank" rel="noopener">Angular: Best Practices</a>的总结。</p>
+</blockquote>
+<p>学习angular代码风格及最佳实践能写出更漂亮的程序。</p>
+<h3 id="单一职责"><a href="#单一职责" class="headerlink" title="单一职责"></a>单一职责</h3><p>对所有的组件、服务等等应用<a href="https://wikipedia.org/wiki/Single_responsibility_principle" target="_blank" rel="noopener">单一职责原则 (SRP)</a>。这样可以让应用更干净、更易读、更易维护、更易测试</p>
+<h4 id="单一规则"><a href="#单一规则" class="headerlink" title="单一规则"></a>单一规则</h4><ul>
+<li>坚持每个文件只定义一样东西（例如服务或组件）</li>
+<li>考虑把文件大小限制在 400 行代码以内。<h4 id="小函数"><a href="#小函数" class="headerlink" title="小函数"></a>小函数</h4></li>
+<li>坚持定义简单函数</li>
+<li>考虑限制在 75 行之内。</li>
+</ul>
+<h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><h4 id="总体命名原则"><a href="#总体命名原则" class="headerlink" title="总体命名原则"></a>总体命名原则</h4><ul>
+<li>坚持所有符号使用一致的命名规则。</li>
+<li>坚持遵循同一个模式来描述符号的特性和类型。推荐的模式为 feature.type.ts。</li>
+</ul>
+<p>例如，app/heroes/hero-list.component.ts 包含了一个用来管理英雄列表的组件</p>
+<h4 id="使用点和横杠来分隔文件名"><a href="#使用点和横杠来分隔文件名" class="headerlink" title="使用点和横杠来分隔文件名"></a>使用点和横杠来分隔文件名</h4><ul>
+<li>坚持 在描述性名字中，用横杠来分隔单词。</li>
+<li>坚持使用点来分隔描述性名字和类型。</li>
+<li>坚持遵循先描述组件特性，再描述它的类型的模式，对所有组件使用一致的类型命名规则。推荐的模式为 feature.type.ts。</li>
+<li>坚持使用惯用的后缀来描述类型，包括 *.service、*.component、*.pipe、.module、.directive。 必要时可以创建更多类型名，但必须注意，不要创建太多。<blockquote>
+<p> 像 .service 这样的没有简写过的类型名字，描述清楚，毫不含糊。 像 .srv, .svc, 和 .serv 这样的简写可能令人困惑。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="符号名与文件名"><a href="#符号名与文件名" class="headerlink" title="符号名与文件名"></a>符号名与文件名</h4><ul>
+<li>坚持为所有东西使用一致的命名约定，以它们所代表的东西命名。</li>
+<li>坚持使用大写驼峰命名法来命名类。符号名匹配它所在的文件名。</li>
+<li>坚持在符号名后面追加约定的类型后缀（例如 Component、Directive、Module、Pipe、Service）。</li>
+<li>坚持在文件名后面追加约定的类型后缀（例如 .component.ts、.directive.ts、.module.ts、.pipe.ts、.service.ts）。<blockquote>
+<p>如符号名：export class <strong>HeroesComponent</strong>{}</p>
+<p>文件名：heroes.<strong>component.ts</strong></p>
+</blockquote>
+</li>
+</ul>
+<h4 id="引导"><a href="#引导" class="headerlink" title="引导"></a>引导</h4><ul>
+<li>坚持把应用的引导程序和平台相关的逻辑放到名为 main.ts 的文件里。</li>
+<li>坚持在引导逻辑中包含错误处理代码。</li>
+<li>避免把应用逻辑放在 main.ts 中，而应放在组件或服务里。<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; platformBrowserDynamic &#125; <span class="keyword">from</span> <span class="string">'@angular/platform-browser-dynamic'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; AppModule &#125; <span class="keyword">from</span> <span class="string">'./app/app.module'</span>;</span><br><span class="line"></span><br><span class="line">platformBrowserDynamic().bootstrapModule(AppModule)</span><br><span class="line">  .then(<span class="function"><span class="params">success</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">`Bootstrap success`</span>))</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.error(err));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="组件选择器"><a href="#组件选择器" class="headerlink" title="组件选择器"></a>组件选择器</h4><ul>
+<li>坚持使用中线命名法（dashed-case）或叫烤串命名法（kebab-case）来命名组件的元素选择器。<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'tohHeroButton'</span>,<span class="comment">/****** avoid ******/</span></span><br><span class="line">  templateUrl: <span class="string">'./hero-button.component.html'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HeroButtonComponent &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'toh-hero-button'</span>,<span class="comment">/****** right ******/</span></span><br><span class="line">  templateUrl: <span class="string">'./hero-button.component.html'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HeroButtonComponent &#123;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="为组件添加自定义前缀"><a href="#为组件添加自定义前缀" class="headerlink" title="为组件添加自定义前缀"></a>为组件添加自定义前缀</h4><ul>
+<li>坚持使用带连字符的小写元素选择器值（例如 admin-users）。</li>
+<li>坚持为组件选择器添加自定义前缀。 例如，toh 前缀表示 Tour of Heroes（英雄指南），而前缀 `admin 表示管理特性区。</li>
+<li>坚持使用前缀来识别特性区或者应用程序本身。<blockquote>
+<ol>
+<li>防止与其它应用中的组件和原生 HTML 元素发生命名冲突。</li>
+<li>更容易在其它应用中推广和共享组件。</li>
+<li>组件在 DOM 中更容易被区分出来</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p><strong>错误示例：</strong><br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* avoid */</span></span><br><span class="line"><span class="comment">// HeroComponent is in the Tour of Heroes feature</span></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'hero'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HeroComponent &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* avoid */</span></span><br><span class="line"><span class="comment">// UsersComponent is in an Admin feature</span></span><br><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'users'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> UsersComponent &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>正确示例：</strong><br><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'toh-hero'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> HeroComponent &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(&#123;</span><br><span class="line">  selector: <span class="string">'admin-users'</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> UsersComponent &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="指令选择器"><a href="#指令选择器" class="headerlink" title="指令选择器"></a>指令选择器</h4><ul>
+<li>坚持使用小驼峰形式命名指令的选择器。</li>
+</ul>
+<h4 id="为指令添加自定义前缀"><a href="#为指令添加自定义前缀" class="headerlink" title="为指令添加自定义前缀"></a>为指令添加自定义前缀</h4><ul>
+<li>坚持为指令的选择器添加自定义前缀（例如前缀 toh 来自 Tour of Heroes）。</li>
+<li>坚持用小驼峰形式拼写非元素选择器，除非该选择器用于匹配原生 HTML 属性。</li>
+</ul>
+<p><strong>错误示例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* avoid */</span><br><span class="line">@Directive(&#123;</span><br><span class="line">  selector: &apos;[validate]&apos;</span><br><span class="line">&#125;)</span><br><span class="line">export class ValidateDirective &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>正确示例：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Directive(&#123;</span><br><span class="line">  selector: &apos;[tohValidate]&apos;</span><br><span class="line">&#125;)</span><br><span class="line">export class ValidateDirective &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="管道名"><a href="#管道名" class="headerlink" title="管道名"></a>管道名</h4><ul>
+<li>坚持为所有管道使用一致的命名约定，用它们的特性来命名。<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件名:</span></span><br><span class="line"> elipsis.pipe.ts </span><br><span class="line"></span><br><span class="line"><span class="comment">// 符号名：</span></span><br><span class="line"><span class="meta">@Pipe</span>(&#123; name: <span class="string">'ellipsis'</span> &#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> EllipsisPipe <span class="keyword">implements</span> PipeTransform &#123; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 文件名:</span></span><br><span class="line">init-caps.pipe.ts</span><br><span class="line"></span><br><span class="line"><span class="comment">// 符号名：</span></span><br><span class="line"><span class="meta">@Pipe</span>(&#123; name: <span class="string">'initCaps'</span> &#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> InitCapsPipe <span class="keyword">implements</span> PipeTransform &#123; &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="编程约定"><a href="#编程约定" class="headerlink" title="编程约定"></a>编程约定</h3><h4 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h4><ul>
+<li>坚持用 const 声明变量，除非它们的值在应用的生命周期内会发生变化。</li>
+</ul>
+<h3 id="应用程序结构与NgModule"><a href="#应用程序结构与NgModule" class="headerlink" title="应用程序结构与NgModule"></a>应用程序结构与NgModule</h3><p>所有应用程序的源代码都放到名叫<code>src</code>的目录里。所有特性区都在自己的文件夹中，带有它们自己的NgModule。</p>
+<p>所有内容都遵循每个文件一个特性的原则。每个组件、服务和管道都在自己的文件里。所有第三方程序包保存到其它目录里，而不是<code>src</code>目录。</p>
+<h4 id="LIFT"><a href="#LIFT" class="headerlink" title="LIFT"></a>LIFT</h4><ul>
+<li>坚持组织应用的结构，力求：<ul>
+<li>(Locate)<strong>快速定位</strong>  代码</li>
+<li>(Identify)<strong>一眼识别</strong>  代码</li>
+<li>(Flattest)尽量保持<strong>扁平结构</strong> </li>
+<li>(Try)尝试遵循 <strong>DRY</strong> (Do Not Repeat Yourself, 不重复自己) 原则</li>
+</ul>
+</li>
+<li>坚持四项基本原则定义文件结构，上面的原则是按重要顺序排列的。</li>
+</ul>
+<blockquote>
+<p>检查应用结构是否合理的方法是问问自己：我能快速打开与此特性有关的所有文件并开始工作吗？</p>
+</blockquote>
+<h4 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h4><p>坚持直观、简单和快速地定位代码</p>
+<blockquote>
+<p>要想高效的工作，就必须能迅速找到文件，特别是当不知道（或不记得）文件名时。 把相关的文件一起放在一个直观的位置可以节省时间。 富有描述性的目录结构会让你和后面的维护者眼前一亮。</p>
+</blockquote>
+<h4 id="识别"><a href="#识别" class="headerlink" title="识别"></a>识别</h4><ul>
+<li>坚持命名文件到这个程度：看到名字立刻知道它包含了什么，代表了什么。</li>
+<li>坚持文件名要具有说明性，确保文件中只包含一个组件。</li>
+<li>避免创建包含多个组件、服务或者混合体的文件<blockquote>
+<p>当你有一组小型、紧密相关的特性时，违反一物一文件的规则可能会更好， 这种情况下单一文件可能会比多个文件更容易发现和理解。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="扁平"><a href="#扁平" class="headerlink" title="扁平"></a>扁平</h4><ul>
+<li>坚持尽可能保持扁平的目录结构。</li>
+<li>考虑当同一目录下达到 7 个或更多个文件时创建子目录。</li>
+<li>考虑配置 IDE，以隐藏无关的文件，例如生成出来的 .js 文件和 .js.map 文件等。</li>
+</ul>
+<h4 id="T-DRY（尽量不重复自己）"><a href="#T-DRY（尽量不重复自己）" class="headerlink" title="T-DRY（尽量不重复自己）"></a>T-DRY（尽量不重复自己）</h4><ul>
+<li>坚持 DRY（Don’t Repeat Yourself，不重复自己）。</li>
+<li>避免过度 DRY，以致牺牲了阅读性。<blockquote>
+<p>虽然 DRY 很重要，但如果要以牺牲 LIFT 的其它原则为代价，那就不值得了。 这也就是为什么它被称为 T-DRY。 例如，把组件命名为 hero-view.component.html 是多余的，因为带有 .html 扩展名的文件显然就是一个视图 (view)。 但如果它不那么显著，或不符合常规，就把它写出来。</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="共享特性模块"><a href="#共享特性模块" class="headerlink" title="共享特性模块"></a>共享特性模块</h4><ul>
+<li>坚持在 shared 目录中创建名叫 SharedModule 的特性模块（例如在 app/shared/shared.module.ts 中定义 SharedModule）。</li>
+<li>坚持在共享模块中声明那些可能被特性模块引用的可复用组件、指令和管道。</li>
+<li>考虑把可能在整个应用中到处引用的模块命名为 SharedModule</li>
+<li>考虑<strong>不要</strong>在共享模块中提供服务。服务通常是单例的，应该在整个应用或一个特定的特性模块中只有一份。 不过也有例外，比如，在下面的范例代码中，注意 SharedModule 提供了 FilterTextService。这里可以这么做，因为该服务是无状态的，也就是说，该服务的消费者不会受到这些新实例的影响。</li>
+<li>坚持在 SharedModule 中导入所有模块都需要的资产（例如 CommonModule 和 FormsModule）。</li>
+<li>坚持在 SharedModule 中声明所有组件、指令和管道。</li>
+<li>坚持从 SharedModule 中导出其它特性模块所需的全部符号。</li>
+<li>避免在 SharedModule 中指定应用级的单例服务提供商。如果是刻意要得到多个服务单例也行，不过还是要小心。</li>
+</ul>
+<h4 id="核心特性模块"><a href="#核心特性模块" class="headerlink" title="核心特性模块"></a>核心特性模块</h4><p>TODO</p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2019/03/04/190228-5-阅读与分析期刊论文的意义/">5.阅读与分析期刊论文的意义</a><a class="next" href="/2019/02/28/190228-4-科研所需能力/">4.科研所需能力</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'XXpKTN8USo19rxWzGeLlkhfN-gzGzoHsz',
+  appKey:'JwRVHnS8xGLffFxaFUUWwL2f',
+  placeholder:'来啦~老弟~',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://suilandcoder.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端基础知识/">前端基础知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/研究生手册/">研究生手册</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/沉思录/" style="font-size: 15px;">沉思录</a> <a href="/tags/周国平/" style="font-size: 15px;">周国平</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-8-阅读期刊补充说明/">8.阅读期刊补充说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-7-批判性阅读/">7.批判性阅读</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-6-期刊论文分析技巧/">6.期刊论文分析技巧</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-5-阅读与分析期刊论文的意义/">5.阅读与分析期刊论文的意义</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/03/190303-1-angular风格指南/">angular风格指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/28/190228-4-科研所需能力/">4.科研所需能力</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/28/190228-3-论文的要求/">3.论文的要求</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/28/190228-2-如何进入一个研究领域/">2.如何进入一个研究领域</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/28/190228-1-如何发现适合自己的研究领域/">1.如何发现适合自己的研究领域</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/18/angular第三方包开发/">angular第三方包开发</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://opengmsteam.com/" title="OpenGMS Team" target="_blank">OpenGMS Team</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/" title="OpenGMS" target="_blank">OpenGMS</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/saga_theme/theme-info" title="Online Saga" target="_blank">Online Saga</a><ul></ul><a href="https://shenchaoran.github.io/" title="shenchaoran" target="_blank">shenchaoran</a><ul></ul><a href="https://genggao110.github.io/" title="genggao" target="_blank">genggao</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Zero.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/autopush.js?v=0.0.0"></script></div></body></html>
