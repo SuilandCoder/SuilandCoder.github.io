@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="喜欢摇滚，喜欢篮球，喜欢编程，喜欢很多东西，正在寻找热爱的事情。"><title>linux指令(1) | Zero</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">linux指令(1)</h1><a id="logo" href="/.">Zero</a><p class="description">至道无难，唯嫌拣择。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">linux指令(1)</h1><div class="post-meta">May 28, 2019<span> | </span><span class="category"><a href="/categories/linux/">linux</a></span></div><a class="disqus-comment-count" href="/2019/05/28/190528-1-linux指令-1/#vcomment"><span class="valine-comment-count" data-xid="/2019/05/28/190528-1-linux指令-1/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-linux-压缩和解压命令"><span class="toc-text">1. linux 压缩和解压命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar"><span class="toc-text">.tar</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gz"><span class="toc-text">.gz</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar-gz-和-tgz"><span class="toc-text">.tar.gz 和 .tgz</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bz2"><span class="toc-text">.bz2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Z"><span class="toc-text">.Z</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar-Z"><span class="toc-text">.tar.Z</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip"><span class="toc-text">.zip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rar"><span class="toc-text">.rar</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-xshell上传文件到linux或下载文件到本地windows"><span class="toc-text">2. xshell上传文件到linux或下载文件到本地windows</span></a></li></ol></div></div><div class="post-content"><h2 id="1-linux-压缩和解压命令"><a href="#1-linux-压缩和解压命令" class="headerlink" title="1. linux 压缩和解压命令"></a>1. linux 压缩和解压命令</h2><h3 id="tar"><a href="#tar" class="headerlink" title=".tar"></a>.tar</h3><ul>
+<li>解包：tar zxvf FileName.tar 　　</li>
+<li>打包：tar czvf FileName.tar DirName</li>
+</ul>
+<h3 id="gz"><a href="#gz" class="headerlink" title=".gz"></a>.gz</h3><ul>
+<li>解压1：gunzip FileName.gz 　　</li>
+<li>解压2：gzip -d FileName.gz 　　</li>
+<li>压缩：gzip FileName</li>
+</ul>
+<h3 id="tar-gz-和-tgz"><a href="#tar-gz-和-tgz" class="headerlink" title=".tar.gz 和 .tgz"></a>.tar.gz 和 .tgz</h3><ul>
+<li>解压：tar zxvf FileName.tar.gz 　　</li>
+<li>压缩：tar zcvf FileName.tar.gz DirName</li>
+</ul>
+<h3 id="bz2"><a href="#bz2" class="headerlink" title=".bz2"></a>.bz2</h3><ul>
+<li>解压1：bzip2 -d FileName.bz2</li>
+<li>解压2：bunzip2 FileName.bz2</li>
+<li>压缩： bzip2 -z FileName</li>
+</ul>
+<h3 id="Z"><a href="#Z" class="headerlink" title=".Z"></a>.Z</h3><ul>
+<li>解压：uncompress FileName.Z </li>
+<li>压缩：compress FileName</li>
+</ul>
+<h3 id="tar-Z"><a href="#tar-Z" class="headerlink" title=".tar.Z"></a>.tar.Z</h3><ul>
+<li>解压：tar Zxvf FileName.tar.Z</li>
+<li>压缩：tar Zcvf FileName.tar.Z DirName</li>
+</ul>
+<h3 id="zip"><a href="#zip" class="headerlink" title=".zip"></a>.zip</h3><ul>
+<li>解压：unzip FileName.zip 　　</li>
+<li>压缩：zip FileName.zip DirName</li>
+</ul>
+<h3 id="rar"><a href="#rar" class="headerlink" title=".rar"></a>.rar</h3><ul>
+<li>解压：rar a FileName.rar 　　</li>
+<li>压缩：rar e FileName.rar</li>
+</ul>
+<p>rar请到：<a href="http://www.rarsoft.com/download.htm" target="_blank" rel="noopener">http://www.rarsoft.com/download.htm</a> 下载！</p>
+<p>解压后请将rar_static拷贝到/usr/bin目录（其他由$PATH环境变量指定的目录也可以）： 　　</p>
+<blockquote>
+<p>[root@www2 tmp]# cp rar_static /usr/bin/rar</p>
+</blockquote>
+<p><strong>参考：<a href="http://www.blogjava.net/jiangjf/archive/2007/07/29/133122.html" target="_blank" rel="noopener">BlogJava–重复容易，改变很难</a></strong></p>
+<h2 id="2-xshell上传文件到linux或下载文件到本地windows"><a href="#2-xshell上传文件到linux或下载文件到本地windows" class="headerlink" title="2. xshell上传文件到linux或下载文件到本地windows"></a>2. xshell上传文件到linux或下载文件到本地windows</h2><p>首先linux上需要安装<code>lrzsz</code>工具包：</p>
+<blockquote>
+<p>sudo apt-get install lrzsz</p>
+</blockquote>
+<p><code>rz</code>，<code>sz</code>是Linux/Unix同Windows进行<code>ZModem</code>文件传输的命令行工具，所以要在Xshell连接属性中的设置上传协议为<code>Zmodem</code>和接受的文件路径等，如下图所示：<br><img src="http://wx3.sinaimg.cn/large/5cf483fdgy1g3hetl3rb2j20in0it0tq.jpg" alt="图 2-1 xshell文件传输配置"></p>
+<p>windows端需要支持ZModem的telnet/ssh客户端(xshell支持,好像putty不支持)，SecureCRT就可以用SecureCRT登陆到Unix/Linux主机（telnet或ssh均可）。</p>
+<p>运行命令<code>rz</code>，即是接收文件（上传到Linux上），xshell就会弹出文件选择对话框，选好文件之后关闭对话框，文件就会上传到linux里的当前目录。也可以直接把要上传的文件拖到xshell上完成上传。如下图所示：<br><img src="http://wx1.sinaimg.cn/large/5cf483fdgy1g3hezqrobcj218o0o4q6j.jpg" alt="图 2-2 rz上传指令"></p>
+<p>运行命令<code>sz filename</code> 就是发文件到windows上（保存的目录是可以配置） 比ftp命令方便多了，而且服务器不用再开FTP服务了。如下图所示：<br><img src="http://wx2.sinaimg.cn/mw690/5cf483fdgy1g3hf0rbjf9j218o0o4whz.jpg" alt="图 2-3 sz下载指令"></p>
+<p><strong>参考：<a href="https://www.cnblogs.com/machanghai/p/5976054.html" target="_blank" rel="noopener">博客园–502studio</a></strong></p>
+</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2019/05/22/190415-1-正则表达式/">正则表达式</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'XXpKTN8USo19rxWzGeLlkhfN-gzGzoHsz',
+  appKey:'JwRVHnS8xGLffFxaFUUWwL2f',
+  placeholder:'来啦~老弟~',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://suilandcoder.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端基础知识/">前端基础知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/研究生手册/">研究生手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程杂谈/">编程杂谈</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/转载/" style="font-size: 15px;">转载</a> <a href="/tags/沉思录/" style="font-size: 15px;">沉思录</a> <a href="/tags/周国平/" style="font-size: 15px;">周国平</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/190528-1-linux指令-1/">linux指令(1)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/22/190415-1-正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/16/190316-2-flex布局实例/">（转载）flex布局-实例篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/16/190316-1-flex布局语法/">（转载）flex布局-语法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/190312-1-round函数在各语言中的差别/">round函数在各语言中的差别</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/11/190311-1-通过函数声明与函数表达式理解函数执行上下文/">通过函数声明与函数表达式理解函数执行上下文</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190303-1-angular风格指南/">angular风格指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-8-阅读期刊补充说明/">8.阅读期刊补充说明</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-7-批判性阅读/">7.批判性阅读</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/190228-6-期刊论文分析技巧/">6.期刊论文分析技巧</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://opengmsteam.com/" title="OpenGMS Team" target="_blank">OpenGMS Team</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/" title="OpenGMS" target="_blank">OpenGMS</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/saga_theme/theme-info" title="Online Saga" target="_blank">Online Saga</a><ul></ul><a href="https://shenchaoran.github.io/" title="shenchaoran" target="_blank">shenchaoran</a><ul></ul><a href="https://genggao110.github.io/" title="genggao" target="_blank">genggao</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Zero.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/autopush.js?v=0.0.0"></script></div></body></html>
