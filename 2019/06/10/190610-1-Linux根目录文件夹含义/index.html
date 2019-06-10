@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="喜欢摇滚，喜欢篮球，喜欢编程，喜欢很多东西，正在寻找热爱的事情。"><title>Linux根目录文件夹含义 | Zero</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Linux根目录文件夹含义</h1><a id="logo" href="/.">Zero</a><p class="description">至道无难，唯嫌拣择。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Linux根目录文件夹含义</h1><div class="post-meta">Jun 10, 2019<span> | </span><span class="category"><a href="/categories/linux/">linux</a></span></div><a class="disqus-comment-count" href="/2019/06/10/190610-1-Linux根目录文件夹含义/#vcomment"><span class="valine-comment-count" data-xid="/2019/06/10/190610-1-Linux根目录文件夹含义/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-标准Linux目录结构"><span class="toc-text">1. 标准Linux目录结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-目录含义和用途"><span class="toc-text">2. 目录含义和用途</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-参考资料"><span class="toc-text">3. 参考资料</span></a></li></ol></div></div><div class="post-content"><h2 id="1-标准Linux目录结构"><a href="#1-标准Linux目录结构" class="headerlink" title="1. 标准Linux目录结构"></a>1. 标准Linux目录结构</h2><p>Linux 可以支持多种计算机系统，包括服务器、开发工作站、个人台式机系统等。为了统一这些不同系统的文件系统目录结构，大多数Linux系统使用统一的命名和使用标准，使系统更容易使用和维护。<br>下图1-1为Linux目录结构图：<br><img src="http://wx4.sinaimg.cn/mw690/5cf483fdgy1g3wd5llrmxj20g70gyad3.jpg" alt="图 1-1"></p>
+<h2 id="2-目录含义和用途"><a href="#2-目录含义和用途" class="headerlink" title="2. 目录含义和用途"></a>2. 目录含义和用途</h2><ul>
+<li><strong>/</strong> <ul>
+<li>Linux的根目录，一台电脑有且只有一个根目录，所有的文件都是从这里开始的。举个例子：当你在终端里输入“/home”，你其实是在告诉电脑，先从/（根目录）开始，再进入到home目录。</li>
+</ul>
+</li>
+<li><strong>bin 和 /usr/bin</strong><ul>
+<li>大部分系统命令都以机器可读格式保存为二进制文件。一般用户使用的命令通常位于二进制目录<code>/bin</code>或<code>/usr/bin</code>中。系统必需的核心工具命令如<code>ls, cd, cp, mv</code>和文本编辑器<code>vi</code>都位于目录<code>/bin</code>中。辅助工具如编译器、网页浏览器和办公软件位于目录<code>/usr/bin</code>中，这些目录下的工具也可以通过网络共享给其他系统上的用户使用。我们可以将<code>/bin</code>和<code>/usr/bin</code>当成<strong>非特权命令目录</strong>，因为用户不需要有任何特权就可以使用其中的命令。</li>
+</ul>
+</li>
+<li><strong>boot</strong><ul>
+<li>目录中存放Ubuntu内核文件及引导加载器bootstraploade相关的文件，如果这个目录中的文件被破坏，一般都会出现启动引导异常，无法正常进入系统。root权限才能读写文件</li>
+</ul>
+</li>
+<li><strong>dev</strong><ul>
+<li>该目录包含了Linux系统中使用的所有外部设备，如设备,声卡、磁盘等，还有如<code>/dev/null.</code> <code>/dev/console</code> <code>/dev/zero</code> <code>/dev/full</code> 等。它实际上是访问这些外部设备的端口，访问这些外部设备与访问一个文件或一个目录没有区别。</li>
+</ul>
+</li>
+<li><strong>etc</strong><ul>
+<li>程序的配置文件目录，Linux 系统的特点之一是它的灵活性。通过修改配置文件，可以控制系统的任何方面。配置文件一般保存在配置目录<code>/etc</code>或它的子目录中。例如，系统启动脚本位于<code>/etc/rc.d</code>,网络配置文件位于目录<code>/etc/sysconfig</code>中。</li>
+</ul>
+</li>
+<li><strong>home</strong><ul>
+<li>用户主目录，这里主要存放你的个人数据。具体每个用户的设置文件，用户的桌面文件夹，还有用户的数据都放在这里。每个用户都有自己的用户目录，位置为：<code>/home/用户名</code>。当然，root用户除外。 用户主目录显著的作用是作为私人数据空间，他们可以用这个空间把他们的文件与其他用户的文件分开保存。因为每个用户都有自己的空间，所以两个用户可以将文件或目录取同样的名字而不会出现问题。用户主目录的另一个显著作用是保存用户特有的配置文件。</li>
+</ul>
+</li>
+<li><strong>lib</strong><ul>
+<li>动态链接共享库文件存放地。bin和sbin需要的库文件。类似windows的DLL。几乎所有的应用程序都会用到该目录下的共享库。</li>
+</ul>
+</li>
+<li><strong>mnt</strong><ul>
+<li>临时将别的文件系统挂在该目录下。这个目录一般是用于存放挂载储存设备的挂载目录的。</li>
+</ul>
+</li>
+<li><strong>opt</strong><ul>
+<li>这里主要存放一些可选的程序。第三方软件在安装时默认会找这个目录，安装到/opt目录下的程序，它所有的数据、库文件等等都是放在同个目录下面。 </li>
+</ul>
+</li>
+<li><strong>proc</strong><ul>
+<li>这是process的缩写，表示进程。存放的是系统信息和进程信息。可以在该目录下获取系统信息，这些信息是在内存中由系统自己产生的，操作系统运行时，进程（正在运行中的程序）信息及内核信息（比如cpu、硬盘分区、内存信息等）存放在这里。该目录的内容不在硬盘上而在内存里。</li>
+</ul>
+</li>
+<li><strong>root</strong><ul>
+<li>系统管理员（root user）的目录。超级管理员拥有最高级的权限，能够对系统中的几乎所有文件系统可读可写可执行的操作。</li>
+</ul>
+</li>
+<li><strong>sbin 和 /usr/sbin</strong><ul>
+<li>就如同<code>/bin 和 /usr/bin</code> 为一般用户保存命令文件一样，它们也为超级用户（根用户）保存命令文件。其中包括安装和删除硬件、启动和关闭系统以及进行系统维护的命令。和上面提到的将命令分别存放与<code>/bin</code> 和 <code>/usr/bin</code> 的原因一样，这些<code>特权命令</code>也是分别保存在两个目录中。</li>
+</ul>
+</li>
+<li><strong>tmp</strong><ul>
+<li>用来存放不同程序执行时产生的临时文件，一般系统重启不会被保存</li>
+</ul>
+</li>
+<li><strong>usr</strong><ul>
+<li>用户的应用程序和文件几乎都存放在该目录下,在这个目录下，你可以找到那些不适合放在<code>/bin</code>或<code>/etc</code>目录下的额外的工具。比如像游戏阿，一些打印工具等等。<code>/usr</code>目录包含了许多子目录： <code>/usr/bin</code>目录用于存放程序；<code>/usr/share</code>用于存放一些共享的数据，比如音乐文件或者图标等等；<code>/usr/lib</code>目录用于存放那些不能直接运行的，但却是许多程序运行所必需的一些函数库文件。你的软件包管理器会自动帮你管理好<code>/usr</code>目录的。 </li>
+</ul>
+</li>
+<li><strong>var</strong><ul>
+<li>存放内容经常变化的文件和目录。例如日志，电子邮件，网站，ftp归档文件等。将这些文件放在这里便于给它们分配空间，同时也保护系统里其他比较稳定的文件。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-参考资料"><a href="#3-参考资料" class="headerlink" title="3. 参考资料"></a>3. 参考资料</h2><ol>
+<li>《Red Hat Linux 用户基础》</li>
+<li><a href="https://chadliu.iteye.com/blog/2034149" target="_blank" rel="noopener">iteye——ChadLiu:Linux根目录下各个文件夹的含义和用途.</a></li>
+<li><a href="https://lsw521314.iteye.com/blog/1274923" target="_blank" rel="noopener">iteye——lsw521314:Ubuntu下各个目录的一般作用</a></li>
+<li><a href="https://www.cnblogs.com/cbqcbq69/p/9000210.html" target="_blank" rel="noopener">博客园——程百球：Ubuntu根目录下各文件夹的作用</a></li>
+</ol>
+</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2019/06/05/数据处理平台/">数据处理平台</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+var verify = 'false' == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'XXpKTN8USo19rxWzGeLlkhfN-gzGzoHsz',
+  appKey:'JwRVHnS8xGLffFxaFUUWwL2f',
+  placeholder:'来啦~老弟~',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})</script></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"><input type="hidden" name="sitesearch" value="https://suilandcoder.github.io"></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/angular/">angular</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端基础知识/">前端基础知识</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/研究生手册/">研究生手册</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/编程杂谈/">编程杂谈</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目/">项目</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/转载/" style="font-size: 15px;">转载</a> <a href="/tags/诗、句/" style="font-size: 15px;">诗、句</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/06/10/190610-1-Linux根目录文件夹含义/">Linux根目录文件夹含义</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/05/数据处理平台/">数据处理平台</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/06/04/190604-1-LocalStorage-SessionStorage-Cookie介绍/">LocalStorage,SessionStorage,Cookie介绍</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/30/我的心曾悲伤七次/">我的心曾悲伤七次</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/30/190530-1-linux用户及用户组/">linux用户及用户组</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/28/190528-1-linux指令-1/">linux指令(1)</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/05/22/190415-1-正则表达式/">正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/16/190316-2-flex布局实例/">（转载）flex布局-实例篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/16/190316-1-flex布局语法/">（转载）flex布局-语法篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/190312-1-round函数在各语言中的差别/">round函数在各语言中的差别</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://opengmsteam.com/" title="OpenGMS Team" target="_blank">OpenGMS Team</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/" title="OpenGMS" target="_blank">OpenGMS</a><ul></ul><a href="http://geomodeling.njnu.edu.cn/saga_theme/theme-info" title="Online Saga" target="_blank">Online Saga</a><ul></ul><a href="https://shenchaoran.github.io/" title="shenchaoran" target="_blank">shenchaoran</a><ul></ul><a href="https://genggao110.github.io/" title="genggao" target="_blank">genggao</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">Zero.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script><script type="text/javascript" src="/js/autopush.js?v=0.0.0"></script></div></body></html>
