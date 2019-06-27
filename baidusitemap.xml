@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://suilandcoder.github.io/2019/06/21/190621-2-WMS%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-06-21</lastmod>
+    <loc>https://suilandcoder.github.io/2019/06/27/190627-1-angular-bug%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2019-06-27</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/06/22/190622-1-WFS%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-06-27</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/06/21/190621-1-XML-Schema%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-06-21</lastmod>
+    <lastmod>2019-06-22</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/06/12/190612-1-Linux%E5%AE%89%E8%A3%85MongoDB%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2019-06-22</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/06/10/190610-1-Linux%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%AB%E4%B9%89/</loc>
+    <lastmod>2019-06-22</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/05/28/190528-1-linux%E6%8C%87%E4%BB%A4-1/</loc>
+    <lastmod>2019-06-22</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/05/30/190530-1-linux%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84/</loc>
+    <lastmod>2019-06-22</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/06/21/190621-2-WMS%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-06-22</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/06/05/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B9%B3%E5%8F%B0/</loc>
     <lastmod>2019-06-21</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/06/12/190612-1-Linux%E5%AE%89%E8%A3%85MongoDB%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2019-06-13</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/05/30/190530-1-linux%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84/</loc>
-    <lastmod>2019-06-12</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/05/28/190528-1-linux%E6%8C%87%E4%BB%A4-1/</loc>
-    <lastmod>2019-06-12</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/06/10/190610-1-Linux%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%96%87%E4%BB%B6%E5%A4%B9%E5%90%AB%E4%B9%89/</loc>
-    <lastmod>2019-06-12</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/05/30/%E6%88%91%E7%9A%84%E5%BF%83%E6%9B%BE%E6%82%B2%E4%BC%A4%E4%B8%83%E6%AC%A1/</loc>
     <lastmod>2019-06-04</lastmod>
