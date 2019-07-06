@@ -122,6 +122,8 @@ div {
       #sidebar .widget .tagcloud a {
         line-height: 1.5;
         padding: 5px; }
+    #sidebar .widget .flagcounter {
+      margin-top: 10px; }
     #sidebar .widget ul {
       list-style: none;
       padding: 0; }
