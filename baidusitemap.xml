@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://suilandcoder.github.io/2019/07/06/190706-1-js%E4%B8%AD%E7%9A%84apply-call%E5%92%8Cbind%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2019-07-06</lastmod>
+  </url>  <url>
+    <loc>https://suilandcoder.github.io/2019/06/21/190621-2-WMS%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2019-07-06</lastmod>
+  </url>  <url>
     <loc>https://suilandcoder.github.io/2019/06/22/190622-1-WFS%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2019-07-06</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/06/21/190621-1-XML-Schema%E8%AF%A6%E8%A7%A3/</loc>
-    <lastmod>2019-07-06</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/07/06/190706-1-js%E4%B8%AD%E7%9A%84apply-call%E5%92%8Cbind%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-07-06</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/03/16/190316-1-flex%E5%B8%83%E5%B1%80%E8%AF%AD%E6%B3%95/</loc>
@@ -29,9 +32,6 @@
     <lastmod>2019-06-22</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/05/30/190530-1-linux%E7%94%A8%E6%88%B7%E5%8F%8A%E7%94%A8%E6%88%B7%E7%BB%84/</loc>
-    <lastmod>2019-06-22</lastmod>
-  </url>  <url>
-    <loc>https://suilandcoder.github.io/2019/06/21/190621-2-WMS%E8%AF%A6%E8%A7%A3/</loc>
     <lastmod>2019-06-22</lastmod>
   </url>  <url>
     <loc>https://suilandcoder.github.io/2019/06/05/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B9%B3%E5%8F%B0/</loc>
