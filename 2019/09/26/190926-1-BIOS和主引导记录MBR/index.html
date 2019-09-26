@@ -1,5 +1,42 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="喜欢摇滚，喜欢篮球，喜欢编程，喜欢很多东西，正在寻找热爱的事情。"><title>linux用户及用户组 | Zero</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">linux用户及用户组</h1><a id="logo" href="/.">Zero</a><p class="description">至道无难，唯嫌拣择。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">linux用户及用户组</h1><div class="post-meta">May 30, 2019<span> | </span><span class="category"><a href="/categories/linux/">linux</a></span></div><a class="disqus-comment-count" href="/2019/05/30/190530-1-linux用户及用户组/#vcomment"><span class="valine-comment-count" data-xid="/2019/05/30/190530-1-linux用户及用户组/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#TODO"><span class="toc-text">TODO!</span></a></li></ol></div></div><div class="post-content"><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO!"></a>TODO!</h2><p>将会参考以下资料：<br><a href="https://www.cnblogs.com/jackyyou/p/5498083.html" target="_blank" rel="noopener">博客园–Jacky’s Blog</a></p>
-</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2019/05/30/我的心曾悲伤七次/">我的心曾悲伤七次</a><a class="next" href="/2019/05/28/190528-1-linux指令-1/">linux指令(1)</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="喜欢摇滚，喜欢篮球，喜欢编程，喜欢很多东西，正在寻找热爱的事情。"><title>BIOS和主引导记录MBR | Zero</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">BIOS和主引导记录MBR</h1><a id="logo" href="/.">Zero</a><p class="description">至道无难，唯嫌拣择。</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">BIOS和主引导记录MBR</h1><div class="post-meta">Sep 26, 2019<span> | </span><span class="category"><a href="/categories/计算机操作系统/">计算机操作系统</a></span></div><a class="disqus-comment-count" href="/2019/09/26/190926-1-BIOS和主引导记录MBR/#vcomment"><span class="valine-comment-count" data-xid="/2019/09/26/190926-1-BIOS和主引导记录MBR/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Basic-I-O-System-Firmware-固件"><span class="toc-text">1. Basic I/O System(Firmware,固件)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-加电自检-POST"><span class="toc-text">2. 加电自检 POST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-主启动记录MBR"><span class="toc-text">3. 主启动记录MBR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-总结"><span class="toc-text">4. 总结</span></a></li></ol></div></div><div class="post-content"><h3 id="1-Basic-I-O-System-Firmware-固件"><a href="#1-Basic-I-O-System-Firmware-固件" class="headerlink" title="1. Basic I/O System(Firmware,固件)"></a>1. Basic I/O System(Firmware,固件)</h3><p>功能：</p>
+<ul>
+<li>系统启动配置</li>
+<li>基本的设备I/O服务</li>
+<li>系统的加电自检和启动 <blockquote>
+<p>固件：以硬件方式存在的程序或软件。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-加电自检-POST"><a href="#2-加电自检-POST" class="headerlink" title="2. 加电自检 POST"></a>2. 加电自检 POST</h3><ul>
+<li>Power On Self-Test</li>
+<li>初始化基本硬件<ul>
+<li>CPU,内存，显卡……</li>
+</ul>
+</li>
+<li>自检正常不提示，错误则通过喇叭提示</li>
+<li>POST 之后<ul>
+<li>查找显卡BIOS，调用显卡BIOS；</li>
+<li>依次查找其它设备执行相应设备的BIOS；</li>
+<li>显示启动画面；</li>
+<li>从硬盘/软盘/光驱/U盘读取OS；</li>
+<li>OS启动后，由OS接管计算机；</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-主启动记录MBR"><a href="#3-主启动记录MBR" class="headerlink" title="3. 主启动记录MBR"></a>3. 主启动记录MBR</h3><p>在BIOS读硬盘的过程中，会首先读取硬盘/软盘的一个特殊扇区，这个扇区是硬盘/软盘的首扇区——MBR</p>
+<ul>
+<li>存放在硬盘/软盘的首扇区；</li>
+<li>存放和OS启动的相关信息（Main Boot Record）</li>
+<li>512 Bytes</li>
+<li>结束：0xAA55h</li>
+</ul>
+<p><img src="https://wx2.sinaimg.cn/large/5cf483fdgy1g7cpudklblj20ju0byadd.jpg" alt="硬盘分区/格式化"></p>
+<h3 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h3><ol>
+<li>POST→CMOS设置（硬盘启动）→读取MBR→控制权交给MBR。</li>
+<li>MBR读取分区表（Partition Table），找到其中的活动分区（Active Partition），并确认其他的分区都不是活动分区。MBR读取活动分区的第一个分区（分区引导记录PBR）并把它加载到内存中去。</li>
+<li>PBR继续控制后面的引导过程。</li>
+</ol>
+</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2019/09/22/190922-1-前端进阶-01数据类型/">前端进阶-01数据类型</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'true' == true ? true : false;
 var verify = 'false' == true ? true : false;
 var GUEST_INFO = ['nick','mail','link'];
 var guest_info = 'nick,mail,link'.split(',').filter(function(item){
